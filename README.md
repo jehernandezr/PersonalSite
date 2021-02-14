@@ -9,5 +9,5 @@ This page contains an overall description of me, like a CV, it has info about:
 * My academic background.
 
 # Link to visit the personal website:
-https://jehernandezr.github.io/personalsite/
+https://jehernandezr.github.io/PersonalSite/
 
