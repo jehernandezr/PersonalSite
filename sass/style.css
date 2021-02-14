@@ -63,12 +63,11 @@ html body #carousel #text .container-fluid {
 
 html body #projects {
   background-color: var(--gray2);
-  height: 100%;
   margin-top: 2rem;
   padding-top: 1rem;
 }
 
-html body #projects .row .card-image {
+html body #projects .card-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,18 +76,9 @@ html body #projects .row .card-image {
           justify-content: center;
 }
 
-html body #projects .row .card img {
-  max-height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 20px;
-  opacity: 0.7;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+html body #projects .card-image .card-img-top {
+  height: 12rem;
+  width: 13rem;
 }
 
 html body #projects a {
@@ -132,5 +122,9 @@ html body #hobbies {
   padding-top: 2rem;
   margin-top: 3rem;
   margin-bottom: 1rem;
+}
+
+html body footer a {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
