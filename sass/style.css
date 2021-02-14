@@ -1,0 +1,136 @@
+/* SCSS HEX */
+/* SCSS HSL */
+/* SCSS RGB */
+/* SCSS Gradient */
+html {
+  scroll-behavior: smooth;
+}
+
+html :root {
+  --gray1: rgba(0, 0, 0, 0.5);
+  --gray2: rgba(119, 119, 119, 0.05);
+}
+
+html body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+html body .bg-primary {
+  background: -webkit-gradient(linear, left top, right top, from(#122c34ff), color-stop(#224870ff), color-stop(#2a4494ff), color-stop(#2a4494ff), color-stop(#224870ff), to(#122c34ff)) !important;
+  background: linear-gradient(90deg, #122c34ff, #224870ff, #2a4494ff, #2a4494ff, #224870ff, #122c34ff) !important;
+}
+
+html body #welcome {
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+html body #welcome .carousel-inner img {
+  max-height: 43rem;
+  min-height: 42vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(79%);
+          filter: grayscale(79%);
+}
+
+html body #carousel {
+  position: relative;
+}
+
+html body #carousel .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--gray1);
+  color: white;
+}
+
+html body #carousel .overlay .container,
+html body #carousel .overlay .row {
+  height: 100%;
+}
+
+html body #carousel #text .container-fluid {
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+  background-color: var(--gray1);
+  padding: 10px 10px 10px 10px;
+  color: white;
+}
+
+html body #projects {
+  background-color: var(--gray2);
+  height: 100%;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+html body #projects .row .card-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body #projects .row .card img {
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  opacity: 0.7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body #projects a {
+  color: #757373;
+}
+
+html body #projects a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+html body #datosB {
+  padding-top: 3rem;
+}
+
+html body #workxp {
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+html body #skills {
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+html body #contacto {
+  background-color: var(--gray2);
+  height: 100%;
+}
+
+html body .icono {
+  width: 30px;
+  height: 30px;
+}
+
+html body .listText {
+  font-size: calc((1vw + 1vh) * 0.9);
+}
+
+html body #hobbies {
+  padding-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,215 @@
+/* SCSS HEX */
+$gunmetal: #122c34ff;
+$indigo-dye: #224870ff;
+$dark-cornflower-blue: #2a4494ff;
+$carolina-blue: #4ea5d9ff;
+$medium-turquoise: #44cfcbff;
+
+/* SCSS HSL */
+$gunmetal: hsla(194, 49%, 14%, 1);
+$indigo-dye: hsla(211, 53%, 29%, 1);
+$dark-cornflower-blue: hsla(225, 56%, 37%, 1);
+$carolina-blue: hsla(202, 65%, 58%, 1);
+$medium-turquoise: hsla(178, 59%, 54%, 1);
+
+/* SCSS RGB */
+$gunmetal: rgba(18, 44, 52, 1);
+$indigo-dye: rgba(34, 72, 112, 1);
+$dark-cornflower-blue: rgba(42, 68, 148, 1);
+$carolina-blue: rgba(78, 165, 217, 1);
+$medium-turquoise: rgba(68, 207, 203, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(
+  0deg,
+  #122c34ff,
+  #224870ff,
+  #2a4494ff,
+  #4ea5d9ff,
+  #44cfcbff
+);
+$gradient-right: linear-gradient(
+  90deg,
+  #122c34ff,
+  #224870ff,
+  #2a4494ff,
+  #2a4494ff,
+  #224870ff,
+  #122c34ff
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  #122c34ff,
+  #224870ff,
+  #2a4494ff,
+  #4ea5d9ff,
+  #44cfcbff
+);
+$gradient-left: linear-gradient(
+  270deg,
+  #122c34ff,
+  #224870ff,
+  #2a4494ff,
+  #4ea5d9ff,
+  #44cfcbff
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  #122c34ff,
+  #224870ff,
+  #2a4494ff,
+  #4ea5d9ff,
+  #44cfcbff
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #122c34ff,
+  #224870ff,
+  #2a4494ff,
+  #4ea5d9ff,
+  #44cfcbff
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  #122c34ff,
+  #224870ff,
+  #2a4494ff,
+  #4ea5d9ff,
+  #44cfcbff
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #122c34ff,
+  #224870ff,
+  #2a4494ff,
+  #4ea5d9ff,
+  #44cfcbff
+);
+$gradient-radial: radial-gradient(
+  #122c34ff,
+  #224870ff,
+  #2a4494ff,
+  #4ea5d9ff,
+  #44cfcbff
+);
+
+html {
+  scroll-behavior: smooth;
+  :root {
+    --gray1: rgba(0, 0, 0, 0.5);
+    --gray2: rgba(119, 119, 119, 0.05);
+  }
+
+  body {
+    font-family: "Noto Sans KR", sans-serif;
+  
+  .bg-primary {
+    background: $gradient-right !important;
+  }
+
+
+
+  #welcome {
+    position: relative;
+    .carousel-inner {
+        img {
+            max-height: 43rem;
+            min-height: 42vh;
+      object-fit: cover;
+      filter: grayscale(79%);
+    }
+  }
+      margin-top: 2.5rem;
+      }
+
+  #carousel {
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--gray1);
+      color: white;
+      .container,
+      .row {
+        height: 100%;
+      }
+    }
+
+    #text {
+      .container-fluid {
+        filter: grayscale(70%);
+        background-color: var(--gray1);
+        padding: 10px 10px 10px 10px;
+        color: white;
+      }
+    }
+  }
+
+  #projects {
+    background-color: var(--gray2);
+    height: 100%;
+    margin-top: 2rem;
+    padding-top: 1rem;
+
+    .row {
+      .card-image {
+        display: flex;
+        justify-content: center;
+      }
+      .card {
+        img {
+          max-height: 200px;
+          object-fit: cover;
+          border-radius: 20px;
+          opacity: 0.7;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    a {
+      color: rgb(117, 115, 115);
+    }
+    a:hover {
+      color: black;
+      text-decoration: none;
+    }
+
+    }
+  
+  #datosB {
+      padding-top: 3rem;
+    
+  }
+      #workxp {
+          padding-top: 1rem;
+          margin-top: 1rem;
+          }
+            #skills {
+                padding-top: 1rem;
+          margin-top: 1rem;
+                }
+  #contacto {
+    background-color: var(--gray2);
+    height: 100%;
+  }
+
+  .icono {
+    width: 30px;
+    height: 30px;
+  }
+
+  .listText {
+    font-size: calc((1vw + 1vh) * 0.9);
+  }
+    #hobbies {
+        padding-top: 2rem; 
+        margin-top: 3rem; 
+        margin-bottom: 1rem;
+        }
+}
+}
