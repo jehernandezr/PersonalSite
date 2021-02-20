@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <link rel="icon" type="image" href="/images/favicon.png"/>
-  <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+  <link rel="icon" type="image" href="/images/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
   <meta name="author" content="Jonatan Hernandez" />
   <meta name="description" content="This website contains several personal information, like hobbies,
     most used programming languages, etc." />
@@ -67,12 +67,19 @@
               <img src="images/series.jpg" class="d-block w-100" alt="watching series">
             </div>
           </div>
+          <!-- es llamativo y se ve bien al abrir la página
+               yo sugeriría ajustar las imágenes del carrusel
+               por la altura y no el ancho (y centrarlas luego)
+               porque al cambiar de imagen el carrusel cambia
+               de altura y mueve todo lo que está debajo
+          -->
           <div class="overlay">
             <div class="container">
               <div class="row align-items-center">
                 <div class="col-md-6 ">
                   <h1 class="text-light">Jonatan Hernandez</h1>
-                  <p class="text-justify text-light">Hello and welcome to my website! I'm a sofware developer student.</p>
+                  <p class="text-justify text-light">Hello and welcome to my website! I'm a sofware developer student.
+                  </p>
                 </div>
               </div>
             </div>
@@ -100,17 +107,22 @@
                   <div class="card-body">
                     <h5 class="card-title text-center">Some History</h5>
                     <p class="card-text text-center text-justify"> I was born in August 18th, 2001
-                      in Fusagausgá,Colombia. I am studying Systems and computing engineering at Los Andes University, Bogotá Colombia.
+                      in Fusagausgá,Colombia. I am studying Systems and computing engineering at Los Andes University,
+                      Bogotá Colombia.
                     </p>
                     <h5 class="card-title text-center mt-4"> Reach Me By</h5>
                     <div class="iconos text-center">
-                      <a href="https://www.facebook.com/JONATAN1808/" target="_blank" rel="noreferrer"><i class="fab fa-facebook-square fa-2x"></i> </a>
+                      <a href="https://www.facebook.com/JONATAN1808/" target="_blank" rel="noreferrer"><i
+                          class="fab fa-facebook-square fa-2x"></i> </a>
 
-                      <a href="https://github.com/jehernandezr" target="_blank" rel="noreferrer"><i class="fab fa-github-square fa-2x"></i></a>
+                      <a href="https://github.com/jehernandezr" target="_blank" rel="noreferrer"><i
+                          class="fab fa-github-square fa-2x"></i></a>
 
-                      <a href="https://www.linkedin.com/in/jonatan-hernandez-rubio/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin fa-2x"></i></a>
+                      <a href="https://www.linkedin.com/in/jonatan-hernandez-rubio/" target="_blank" rel="noreferrer"><i
+                          class="fab fa-linkedin fa-2x"></i></a>
 
-                      <a href=" https://twitter.com/jonatane_hr" target="_blank" rel="noreferrer"><i class="fab fa-twitter-square fa-2x"></i></a>
+                      <a href=" https://twitter.com/jonatane_hr" target="_blank" rel="noreferrer"><i
+                          class="fab fa-twitter-square fa-2x"></i></a>
                     </div>
                   </div>
                 </div>
@@ -181,7 +193,7 @@
               <div class="card-body">
                 <div class="float-right text-success">2018 - PRESENT</div>
                 <h4 class="card-title text-success">College</h4>
-                <p class="card-text">I'm Finisshing my Systems and Computing Engineering gedree at Los Andes University 
+                <p class="card-text">I'm Finisshing my Systems and Computing Engineering gedree at Los Andes University
                   Bogotá, Colombia.</p>
               </div>
             </div>
@@ -195,10 +207,11 @@
         <h2 class="text-muted text-center font-weight-dark mb-4">Work experience</h2>
         <div class="row">
           <div class="col md-6">
-            <div class="card mb-2" >
+            <div class="card mb-2">
               <div class="row no-gutters">
                 <div class="col-md-2">
-                    <img src="images/apple-icon-152x152.png" alt="">
+                  <img src="images/apple-icon-152x152.png" alt="">
+                  <!-- falta el alt -->
                 </div>
                 <div class="col-md-10">
                   <div class="card-body">
@@ -215,6 +228,8 @@
         </div>
       </div>
       <!-- Skills -->
+      <!-- súper chevere esta parte -->
+      <!-- los atributos style deberían ir en el css/scss -->
       <div id="skills" class="container">
         <h2 class="text-muted text-center font-weight-dark mb-4">Skills</h2>
         <div class="row mb-2">
@@ -232,7 +247,7 @@
             <h5 class="card-title text-center text-muted">Java</h5>
             <div class="progress">
               <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar"
-                aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%"> 80%</div>
+                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"> 80%</div>
             </div>
           </div>
         </div>
@@ -242,7 +257,7 @@
             <h5 class="card-title text-center text-muted">Software Development</h5>
             <div class="progress">
               <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
-                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"> 70%</div>
+                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"> 70%</div>
             </div>
           </div>
         </div>
@@ -270,94 +285,105 @@
     </section>
 
     <!-- Projects section -->
-
+    <!--  me gusta que el texto resalta mostrando que es un link
+          aunque creo que en celulares/tablets no es tan evidente que se trata de enlaces
+    -->
     <section id="projects">
-        <div class="container">
-          <div class="row mb-4 mt-4">
-            <div class="col text-center text-uppercase mt-4">
-              <h2>Projects</h2>
-            </div>
+      <div class="container">
+        <div class="row mb-4 mt-4">
+          <div class="col text-center text-uppercase mt-4">
+            <h2>Projects</h2>
           </div>
-          <div class="card-deck">
-  
-            <div class="card mb-4">
-              <a href="https://github.com/jehernandezr/s4_Empleos_front" target="_blank" rel="noreferrer">
-                <div class="card-image">
-                  <img class="card-img-top" src="images/hiring.png" alt="Hiring Logo">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title text-center">Web App Hiring</h5>
-                  <p class="card-text  text-justify text-center">It's an app with the purpose of helping university students and employers of ocassional labors to hiring them by hours and gain extra money. </p>
-              </a>
-            </div>
-          </div>
-  
+        </div>
+        <div class="card-deck">
+
           <div class="card mb-4">
-            <a href="https://guruh.com.co" target="_blank" rel="noreferrer">
+            <a href="https://github.com/jehernandezr/s4_Empleos_front" target="_blank" rel="noreferrer">
               <div class="card-image">
-                <img class="card-img-top" src="images/apple-icon-152x152.png" alt="Guruh">
+                <img class="card-img-top" src="images/hiring.png" alt="Hiring Logo">
               </div>
               <div class="card-body">
-                <h5 class="card-title text-center">Guruh Project</h5>
-                <p class="card-text text-justify text-center">This is an app made with the purpose of helping high school students to find their
-                     carreer by giving them information and connecting them with college students. </p>
+                <h5 class="card-title text-center">Web App Hiring</h5>
+                <p class="card-text  text-justify text-center">It's an app with the purpose of helping university
+                  students and employers of ocassional labors to hiring them by hours and gain extra money. </p>
             </a>
           </div>
         </div>
-  
+
         <div class="card mb-4">
-          <a href="https://github.com/ISIS2503/ISIS2503-202010-S1-BinomioDeOroCuadrado/wiki/Sprint-3" target="_blank" rel="noreferrer">
+          <a href="https://guruh.com.co" target="_blank" rel="noreferrer">
             <div class="card-image">
-              <img class="card-img-top" src="images/auth0.png" alt="Card image auth0">
+              <img class="card-img-top" src="images/apple-icon-152x152.png" alt="Guruh">
             </div>
             <div class="card-body">
-              <h5 class="card-title text-center">Cipher With Security</h5>
-              <p class="card-text text-justify text-center">This a part of a bigger project in wich me and my team implement a 
-                  combination of auth0 and python in order to satisfy security requirements. Also use crfstoken and request encription.</p>
+              <h5 class="card-title text-center">Guruh Project</h5>
+              <p class="card-text text-justify text-center">This is an app made with the purpose of helping high school
+                students to find their
+                carreer by giving them information and connecting them with college students. </p>
           </a>
-
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-      </section>
-
-  </main>
-
-<!-- Hobbies and Interests section -->
-
-<section id="hobbies">
-    <div class="container">
-      <div class="row mb-4 mt-4">
-        <div class="col text-center text-uppercase">
-          <h2>Interests/Hobbies</h2>
         </div>
       </div>
 
-  </section>
+      <div class="card mb-4">
+        <a href="https://github.com/ISIS2503/ISIS2503-202010-S1-BinomioDeOroCuadrado/wiki/Sprint-3" target="_blank"
+          rel="noreferrer">
+          <div class="card-image">
+            <img class="card-img-top" src="images/auth0.png" alt="Card image auth0">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-center">Cipher With Security</h5>
+            <p class="card-text text-justify text-center">This a part of a bigger project in wich me and my team
+              implement a
+              combination of auth0 and python in order to satisfy security requirements. Also use crfstoken and request
+              encription.</p>
+        </a>
+
+      </div>
+    </section>
+    <!-- Hobbies and Interests section -->
+
+    <section id="hobbies">
+      <div class="container">
+        <div class="row mb-4 mt-4">
+          <div class="col text-center text-uppercase text-break">
+            <h2>Interests & Hobbies</h2>
+            <!-- este titulo se desfasa en tamaños muy pequeños-->
+          </div>
+        </div>
+    </section>
+  </main>
+
+
 
   <!-- Footer -->
   <footer>
     <div class="container-fluid bg-primary ">
       <div class="row">
         <div class="col-8 offset-2 text-center mt-4">
-            <div class="iconos text-end ">
-                <a href="https://www.facebook.com/JONATAN1808/" target="_blank" rel="noreferrer"><i class="fab fa-facebook-square fa-2x"></i> </a>
+          <div class="iconos text-end ">
+            <a href="https://www.facebook.com/JONATAN1808/" target="_blank" rel="noreferrer"><i
+                class="fab fa-facebook-square fa-2x"></i> </a>
 
-                <a href="https://github.com/jehernandezr" target="_blank" rel="noreferrer"><i class="fab fa-github-square fa-2x"></i></a>
+            <a href="https://github.com/jehernandezr" target="_blank" rel="noreferrer"><i
+                class="fab fa-github-square fa-2x"></i></a>
 
-                <a href="https://www.linkedin.com/in/jonatan-hernandez-rubio/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/jonatan-hernandez-rubio/" target="_blank" rel="noreferrer"><i
+                class="fab fa-linkedin fa-2x"></i></a>
 
-                <a href=" https://twitter.com/jonatane_hr" target="_blank" rel="noreferrer"><i class="fab fa-twitter-square fa-2x"></i></a>
-              </div>
-          <p class="text-light">Copyright © 2021 Jonatan Esmits  Hernandez Rubio – Bootstrap</p>
-         
+            <a href=" https://twitter.com/jonatane_hr" target="_blank" rel="noreferrer"><i
+                class="fab fa-twitter-square fa-2x"></i></a>
+          </div>
+          <p class="text-light">Copyright © 2021 Jonatan Esmits Hernandez Rubio – Bootstrap</p>
+
         </div>
       </div>
     </div>
-  </footer> 
-
+  </footer>
+  <!--  el sitio es fácil de navegar tanto en el navegador como dentro del código,
+        todo está separado muy bien y el uso extensivo de bootstrap y sass hace que
+        realizar modificaciones o corregir errores sea rápido y sencillo.
+  
+  -->
 
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
