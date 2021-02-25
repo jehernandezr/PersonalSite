@@ -26,12 +26,19 @@ html body #welcome {
 }
 
 html body #welcome .carousel-inner img {
-  max-height: 43rem;
-  min-height: 43rem;
+  max-height: 99vh;
+  min-height: 99vh;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-filter: grayscale(70%);
-          filter: grayscale(70%);
+  -webkit-filter: grayscale(78%);
+          filter: grayscale(78%);
+}
+
+@media (max-width: 767px) {
+  html body #welcome .carousel-inner img {
+    max-height: 43vh;
+    min-height: 42vh;
+  }
 }
 
 html body #carousel {
