@@ -27,11 +27,11 @@ html body #welcome {
 
 html body #welcome .carousel-inner img {
   max-height: 43rem;
-  min-height: 42vh;
+  min-height: 43rem;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-filter: grayscale(79%);
-          filter: grayscale(79%);
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
 }
 
 html body #carousel {
@@ -90,7 +90,7 @@ html body #projects a:hover {
   text-decoration: none;
 }
 
-html body #datosB {
+html body #about {
   padding-top: 3rem;
 }
 
