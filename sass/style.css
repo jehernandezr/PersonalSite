@@ -5,133 +5,223 @@
 html {
   scroll-behavior: smooth;
 }
-
 html :root {
   --gray1: rgba(0, 0, 0, 0.5);
   --gray2: rgba(119, 119, 119, 0.05);
 }
-
 html body {
   font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
-
 html body .bg-primary {
-  background: -webkit-gradient(linear, left top, right top, from(#122c34ff), color-stop(#224870ff), color-stop(#2a4494ff), color-stop(#2a4494ff), color-stop(#224870ff), to(#122c34ff)) !important;
-  background: linear-gradient(90deg, #122c34ff, #224870ff, #2a4494ff, #2a4494ff, #224870ff, #122c34ff) !important;
+  background: linear-gradient(90deg, #122c34, #224870, #2a4494, #2a4494, #224870, #122c34) !important;
 }
-
+html body h1, html body h2, html body h3, html body h4, html body h5, html body h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+html body p {
+  margin-bottom: 1rem;
+}
 html body #welcome {
   position: relative;
-  margin-top: 2.5rem;
 }
-
 html body #welcome .carousel-inner img {
   max-height: 99vh;
   min-height: 99vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-filter: grayscale(78%);
-          filter: grayscale(78%);
+  object-fit: cover;
+  filter: grayscale(78%);
 }
-
 @media (max-width: 767px) {
   html body #welcome .carousel-inner img {
     max-height: 43vh;
     min-height: 42vh;
   }
 }
-
+html body #welcome {
+  margin-top: 2.5rem;
+}
 html body #carousel {
   position: relative;
 }
-
+html body #carousel .carousel-inner img {
+  max-height: 90vh;
+  object-fit: cover;
+  filter: grayscale(50%);
+  transition: filter 0.3s ease-in-out;
+}
+html body #carousel .carousel-inner img:hover {
+  filter: grayscale(0%);
+}
 html body #carousel .overlay {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--gray1);
-  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
 }
-
 html body #carousel .overlay .container,
 html body #carousel .overlay .row {
   height: 100%;
 }
-
 html body #carousel #text .container-fluid {
-  -webkit-filter: grayscale(70%);
-          filter: grayscale(70%);
+  filter: grayscale(70%);
   background-color: var(--gray1);
   padding: 10px 10px 10px 10px;
   color: white;
 }
-
 html body #projects {
-  background-color: var(--gray2);
+  background-color: #f9f9f9;
   margin-top: 2rem;
-  padding-top: 1rem;
+  padding: 2rem 0;
 }
-
-html body #projects .card-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
+html body #projects .card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+html body #projects .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+html body #projects .card .card-image {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
-html body #projects .card-image .card-img-top {
-  height: 12rem;
-  width: 13rem;
+html body #projects .card .card-image .card-img-top {
+  height: 200px;
+  width: auto;
+  object-fit: cover;
 }
-
 html body #projects a {
-  color: #757373;
+  color: rgb(117, 115, 115);
 }
-
 html body #projects a:hover {
   color: black;
   text-decoration: none;
 }
-
 html body #about {
   padding-top: 3rem;
 }
-
 html body #workxp {
   padding-top: 1rem;
   margin-top: 1rem;
 }
-
 html body #skills {
   padding-top: 1rem;
   margin-top: 1rem;
 }
-
 html body #contacto {
   background-color: var(--gray2);
   height: 100%;
 }
-
 html body .icono {
   width: 30px;
   height: 30px;
 }
-
 html body .listText {
   font-size: calc((1vw + 1vh) * 0.9);
 }
-
 html body #hobbies {
   padding-top: 2rem;
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
-
+html body footer {
+  background: rgb(18, 44, 52);
+  color: #fff;
+  padding: 2rem 0;
+}
 html body footer a {
+  color: rgb(68, 207, 203);
+  transition: color 0.3s ease-in-out;
+}
+html body footer a:hover {
+  color: rgb(78, 165, 217);
+}
+
+/* Ensure consistent size and alignment for progress bars */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 200px; /* Fixed width for all progress bars */
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background-color: #007bff; /* Default color */
+  text-align: center;
+  line-height: 20px;
   color: white;
 }
+
+/* Style variants for progress bars */
+.progress-bar-inner.warning {
+  background-color: #ffc107;
+}
+
+.progress-bar-inner.info {
+  background-color: #17a2b8;
+}
+
+.progress-bar-inner.success {
+  background-color: #28a745;
+}
+
+.progress-bar-inner.danger {
+  background-color: #dc3545;
+}
+
+/* Consistent card styling */
+.skill-card {
+  width: 250px;
+  height: 200px;
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.skill-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive skills grid */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
 /*# sourceMappingURL=style.css.map */

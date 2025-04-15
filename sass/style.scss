@@ -123,118 +123,246 @@ html {
 
   body {
     font-family: "Noto Sans KR", sans-serif;
-  
-  .bg-primary {
-    background: $gradient-right !important;
-  }
+    line-height: 1.6;
+    color: #333;
 
+    .bg-primary {
+      background: $gradient-right !important;
+    }
 
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
 
-  #welcome {
-    position: relative;
-    .carousel-inner {
+    p {
+      margin-bottom: 1rem;
+    }
+
+    #welcome {
+      position: relative;
+      .carousel-inner {
         img {
-            max-height: 99vh;
-            min-height: 99vh;
-          
-      object-fit: cover;
-      filter: grayscale(78%);
-   @include media(xs) {
-             max-height: 43vh;
-             min-height: 42vh;
-           }
-    }
-  }
-      margin-top: 2.5rem;
-      }
-
-  #carousel {
-    position: relative;
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: var(--gray1);
-      color: white;
-      .container,
-      .row {
-        height: 100%;
-      }
-    }
-
-    #text {
-      .container-fluid {
-        filter: grayscale(70%);
-        background-color: var(--gray1);
-        padding: 10px 10px 10px 10px;
-        color: white;
-      }
-    }
-  }
-
-  #projects {
-    background-color: var(--gray2);
-    margin-top: 2rem;
-    padding-top: 1rem;
-
-  
-      .card-image {
-        display: flex;
-        justify-content: center;
-        .card-img-top {
-          height: 12rem;
-          width: 13rem;
+          max-height: 99vh;
+          min-height: 99vh;
+          object-fit: cover;
+          filter: grayscale(78%);
+          @include media(xs) {
+            max-height: 43vh;
+            min-height: 42vh;
           }
-      }
-    a {
-      color: rgb(117, 115, 115);
-    }
-    a:hover {
-      color: black;
-      text-decoration: none;
-    }
-
-    }
-  
-  #about {
-      padding-top: 3rem;
-    
-  }
-      #workxp {
-          padding-top: 1rem;
-          margin-top: 1rem;
-          }
-            #skills {
-                padding-top: 1rem;
-          margin-top: 1rem;
-                }
-  #contacto {
-    background-color: var(--gray2);
-    height: 100%;
-  }
-
-  .icono {
-    width: 30px;
-    height: 30px;
-  }
-
-  .listText {
-    font-size: calc((1vw + 1vh) * 0.9);
-  }
-    #hobbies {
-        padding-top: 2rem; 
-        margin-top: 3rem; 
-        margin-bottom: 1rem;
         }
-          footer {
-            a {
-              color: white;
-              }
-            }
-}
+      }
+      & {
+        margin-top: 2.5rem;
+      }
+    }
+
+    #carousel {
+      position: relative;
+
+      .carousel-inner {
+        img {
+          max-height: 90vh;
+          object-fit: cover;
+          filter: grayscale(50%);
+          transition: filter 0.3s ease-in-out;
+
+          &:hover {
+            filter: grayscale(0%);
+          }
+        }
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 2rem;
+        .container,
+        .row {
+          height: 100%;
+        }
+      }
+
+      #text {
+        .container-fluid {
+          filter: grayscale(70%);
+          background-color: var(--gray1);
+          padding: 10px 10px 10px 10px;
+          color: white;
+        }
+      }
+    }
+
+    #projects {
+      background-color: #f9f9f9;
+      margin-top: 2rem;
+      padding: 2rem 0;
+
+      .card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-image {
+          display: flex;
+          justify-content: center;
+
+          .card-img-top {
+            height: 200px;
+            width: auto;
+            object-fit: cover;
+          }
+        }
+      }
+
+      a {
+        color: rgb(117, 115, 115);
+      }
+      a:hover {
+        color: black;
+        text-decoration: none;
+      }
+    }
+
+    #about {
+      padding-top: 3rem;
+    }
+
+    #workxp {
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+
+    #skills {
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+
+    #contacto {
+      background-color: var(--gray2);
+      height: 100%;
+    }
+
+    .icono {
+      width: 30px;
+      height: 30px;
+    }
+
+    .listText {
+      font-size: calc((1vw + 1vh) * 0.9);
+    }
+
+    #hobbies {
+      padding-top: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: $gunmetal;
+      color: #fff;
+      padding: 2rem 0;
+
+      a {
+        color: $medium-turquoise;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $carolina-blue;
+        }
+      }
+    }
+  }
 }
 
-  
+/* Ensure consistent size and alignment for progress bars */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 200px; /* Fixed width for all progress bars */
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background-color: #007bff; /* Default color */
+  text-align: center;
+  line-height: 20px;
+  color: white;
+}
+
+/* Style variants for progress bars */
+.progress-bar-inner.warning {
+  background-color: #ffc107;
+}
+
+.progress-bar-inner.info {
+  background-color: #17a2b8;
+}
+
+.progress-bar-inner.success {
+  background-color: #28a745;
+}
+
+.progress-bar-inner.danger {
+  background-color: #dc3545;
+}
+
+/* Consistent card styling */
+.skill-card {
+  width: 250px;
+  height: 200px;
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.skill-card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive skills grid */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
