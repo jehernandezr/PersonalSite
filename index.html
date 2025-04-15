@@ -49,6 +49,17 @@
         width: 90%; /* Ensures all progress bars have the same width */
         margin: 0 auto; /* Centers the progress bar within the card */
       }
+
+      .skill-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .skill-logo {
+        width: 24px;
+        height: 24px;
+      }
     </style>
   </head>
 
@@ -289,7 +300,10 @@
             <!-- Programming Languages -->
             <div class="card skill-card">
               <div class="card-body">
-                <h5 class="card-title">Python</h5>
+                <div class="skill-title">
+                  <span class="skill-logo"><i class="fab fa-python fa-lg" style="color: #3776AB"></i></span>
+                  <h5 class="card-title">Python</h5>
+                </div>
                 <div class="progress-container">
                   <div class="progress-bar">
                     <div class="progress-bar-inner" style="width: 80%">80%</div>
@@ -300,7 +314,10 @@
 
             <div class="card skill-card">
               <div class="card-body">
-                <h5 class="card-title">Java</h5>
+                <div class="skill-title">
+                  <span class="skill-logo"><i class="fab fa-java fa-lg" style="color: #007396"></i></span>
+                  <h5 class="card-title">Java</h5>
+                </div>
                 <div class="progress-container">
                   <div class="progress-bar">
                     <div class="progress-bar-inner warning" style="width: 90%">90%</div>
@@ -311,7 +328,10 @@
 
             <div class="card skill-card">
               <div class="card-body">
-                <h5 class="card-title">TypeScript</h5>
+                <div class="skill-title">
+                  <span class="skill-logo"><i class="fab fa-js-square fa-lg" style="color: #3178C6"></i></span>
+                  <h5 class="card-title">TypeScript</h5>
+                </div>
                 <div class="progress-container">
                   <div class="progress-bar">
                     <div class="progress-bar-inner info" style="width: 96%">96%</div>
@@ -322,7 +342,10 @@
 
             <div class="card skill-card">
               <div class="card-body">
-                <h5 class="card-title">JavaScript</h5>
+                <div class="skill-title">
+                  <span class="skill-logo"><i class="fab fa-js fa-lg" style="color: #F7DF1E"></i></span>
+                  <h5 class="card-title">JavaScript</h5>
+                </div>
                 <div class="progress-container">
                   <div class="progress-bar">
                     <div class="progress-bar-inner success" style="width: 96%">96%</div>
@@ -334,7 +357,10 @@
             <!-- Development Skills -->
             <div class="card skill-card">
               <div class="card-body">
-                <h5 class="card-title">Software Development</h5>
+                <div class="skill-title">
+                  <span class="skill-logo"><i class="fas fa-code fa-lg" style="color: #E44D26"></i></span>
+                  <h5 class="card-title">Software Development</h5>
+                </div>
                 <div class="progress-container">
                   <div class="progress-bar">
                     <div class="progress-bar-inner danger" style="width: 90%">90%</div>
@@ -345,7 +371,10 @@
 
             <div class="card skill-card">
               <div class="card-body">
-                <h5 class="card-title">Design Software Architecture</h5>
+                <div class="skill-title">
+                  <span class="skill-logo"><i class="fas fa-sitemap fa-lg" style="color: #0078D7"></i></span>
+                  <h5 class="card-title">Software Architecture</h5>
+                </div>
                 <div class="progress-container">
                   <div class="progress-bar">
                     <div class="progress-bar-inner" style="width: 90%">90%</div>
@@ -356,7 +385,10 @@
 
             <div class="card skill-card">
               <div class="card-body">
-                <h5 class="card-title">Algorithms</h5>
+                <div class="skill-title">
+                  <span class="skill-logo"><i class="fas fa-brain fa-lg" style="color: #4CAF50"></i></span>
+                  <h5 class="card-title">Algorithms</h5>
+                </div>
                 <div class="progress-container">
                   <div class="progress-bar">
                     <div class="progress-bar-inner success" style="width: 70%">70%</div>
@@ -368,7 +400,10 @@
             <!-- Cloud & DevOps -->
             <div class="card skill-card">
               <div class="card-body">
-                <h5 class="card-title">AWS</h5>
+                <div class="skill-title">
+                  <span class="skill-logo"><i class="fab fa-aws fa-lg" style="color: #FF9900"></i></span>
+                  <h5 class="card-title">AWS</h5>
+                </div>
                 <div class="progress-container">
                   <div class="progress-bar">
                     <div class="progress-bar-inner info" style="width: 85%">85%</div>
@@ -379,7 +414,10 @@
 
             <div class="card skill-card">
               <div class="card-body">
-                <h5 class="card-title">GCP</h5>
+                <div class="skill-title">
+                  <span class="skill-logo"><i class="fab fa-google fa-lg" style="color: #4285F4"></i></span>
+                  <h5 class="card-title">GCP</h5>
+                </div>
                 <div class="progress-container">
                   <div class="progress-bar">
                     <div class="progress-bar-inner warning" style="width: 80%">80%</div>
@@ -390,7 +428,10 @@
 
             <div class="card skill-card">
               <div class="card-body">
-                <h5 class="card-title">Docker</h5>
+                <div class="skill-title">
+                  <span class="skill-logo"><i class="fab fa-docker fa-lg" style="color: #2496ED"></i></span>
+                  <h5 class="card-title">Docker</h5>
+                </div>
                 <div class="progress-container">
                   <div class="progress-bar">
                     <div class="progress-bar-inner success" style="width: 90%">90%</div>
@@ -510,7 +551,7 @@
     ></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      integrity="sha384-q8i/X+965DzO0rR7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
     <script

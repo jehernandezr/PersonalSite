@@ -330,7 +330,7 @@ html {
   background-color: #dc3545;
 }
 
-/* Consistent card styling */
+/* Consistent card styling with logo accommodation */
 .skill-card {
   width: 250px;
   height: 200px;
@@ -356,6 +356,28 @@ html {
   justify-content: space-between;
   width: 100%;
   height: 100%;
+}
+
+/* Skill logo styling */
+.skill-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title with logo layout */
+.skill-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.skill-title h5 {
+  margin: 0 0 0 10px;
 }
 
 /* Responsive skills grid */
