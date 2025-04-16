@@ -293,159 +293,201 @@
           </div>
         </div>
 
-        <!-- Updated Skills Section with Responsive Layout -->
-        <section id="skills" class="container">
-          <h2 class="text-muted text-center font-weight-dark mb-4">Skills</h2>
-          <div class="skills-container">
-            <!-- Programming Languages -->
-            <div class="card skill-card">
-              <div class="card-body">
-                <div class="skill-title">
-                  <span class="skill-logo"><i class="fab fa-python fa-lg" style="color: #3776AB"></i></span>
-                  <h5 class="card-title">Python</h5>
+        <!-- Skills Section with Horizontal Auto-Scrolling Carousel -->
+        <section id="skills" class="container skills-section">
+          <h2 class="text-center mb-4">Skills</h2>
+          
+          <!-- Programming Languages Section -->
+          <div class="skills-category">
+            <h3>Technical Skills</h3>
+          </div>
+          
+          <div id="skills-carousel">
+            <div class="skills-slide-track">
+              <!-- Programming Languages Skills -->
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fab fa-python" style="color: #3776AB; font-size: 24px;"></i></span>
+                    <h5>Python</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 80%">80%</div>
+                    </div>
+                  </div>
                 </div>
-                <div class="progress-container">
-                  <div class="progress-bar">
-                    <div class="progress-bar-inner" style="width: 80%">80%</div>
+              </div>
+              
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fab fa-java" style="color: #007396; font-size: 24px;"></i></span>
+                    <h5>Java</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner warning" style="width: 90%">90%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fab fa-js-square" style="color: #3178C6; font-size: 24px;"></i></span>
+                    <h5>TypeScript</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner info" style="width: 96%">96%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fab fa-js" style="color: #F7DF1E; font-size: 24px;"></i></span>
+                    <h5>JavaScript</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner success" style="width: 96%">96%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Development Skills -->
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fas fa-code" style="color: #E44D26; font-size: 24px;"></i></span>
+                    <h5>Software Development</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner danger" style="width: 90%">90%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fas fa-sitemap" style="color: #0078D7; font-size: 24px;"></i></span>
+                    <h5>Software Architecture</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 90%">90%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fas fa-brain" style="color: #4CAF50; font-size: 24px;"></i></span>
+                    <h5>Algorithms</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner success" style="width: 70%">70%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Cloud & DevOps -->
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fab fa-aws" style="color: #FF9900; font-size: 24px;"></i></span>
+                    <h5>AWS</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner info" style="width: 85%">85%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fab fa-google" style="color: #4285F4; font-size: 24px;"></i></span>
+                    <h5>GCP</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner warning" style="width: 80%">80%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fab fa-docker" style="color: #2496ED; font-size: 24px;"></i></span>
+                    <h5>Docker</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner success" style="width: 90%">90%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Duplicate first few cards to create seamless scroll effect -->
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fab fa-python" style="color: #3776AB; font-size: 24px;"></i></span>
+                    <h5>Python</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner" style="width: 80%">80%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="skills-slide">
+                <div class="card skill-card">
+                  <div class="skill-title">
+                    <span class="skill-logo"><i class="fab fa-java" style="color: #007396; font-size: 24px;"></i></span>
+                    <h5>Java</h5>
+                  </div>
+                  <div class="progress-container">
+                    <div class="progress-bar">
+                      <div class="progress-bar-inner warning" style="width: 90%">90%</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="card skill-card">
-              <div class="card-body">
-                <div class="skill-title">
-                  <span class="skill-logo"><i class="fab fa-java fa-lg" style="color: #007396"></i></span>
-                  <h5 class="card-title">Java</h5>
-                </div>
-                <div class="progress-container">
-                  <div class="progress-bar">
-                    <div class="progress-bar-inner warning" style="width: 90%">90%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card skill-card">
-              <div class="card-body">
-                <div class="skill-title">
-                  <span class="skill-logo"><i class="fab fa-js-square fa-lg" style="color: #3178C6"></i></span>
-                  <h5 class="card-title">TypeScript</h5>
-                </div>
-                <div class="progress-container">
-                  <div class="progress-bar">
-                    <div class="progress-bar-inner info" style="width: 96%">96%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card skill-card">
-              <div class="card-body">
-                <div class="skill-title">
-                  <span class="skill-logo"><i class="fab fa-js fa-lg" style="color: #F7DF1E"></i></span>
-                  <h5 class="card-title">JavaScript</h5>
-                </div>
-                <div class="progress-container">
-                  <div class="progress-bar">
-                    <div class="progress-bar-inner success" style="width: 96%">96%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Development Skills -->
-            <div class="card skill-card">
-              <div class="card-body">
-                <div class="skill-title">
-                  <span class="skill-logo"><i class="fas fa-code fa-lg" style="color: #E44D26"></i></span>
-                  <h5 class="card-title">Software Development</h5>
-                </div>
-                <div class="progress-container">
-                  <div class="progress-bar">
-                    <div class="progress-bar-inner danger" style="width: 90%">90%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card skill-card">
-              <div class="card-body">
-                <div class="skill-title">
-                  <span class="skill-logo"><i class="fas fa-sitemap fa-lg" style="color: #0078D7"></i></span>
-                  <h5 class="card-title">Software Architecture</h5>
-                </div>
-                <div class="progress-container">
-                  <div class="progress-bar">
-                    <div class="progress-bar-inner" style="width: 90%">90%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card skill-card">
-              <div class="card-body">
-                <div class="skill-title">
-                  <span class="skill-logo"><i class="fas fa-brain fa-lg" style="color: #4CAF50"></i></span>
-                  <h5 class="card-title">Algorithms</h5>
-                </div>
-                <div class="progress-container">
-                  <div class="progress-bar">
-                    <div class="progress-bar-inner success" style="width: 70%">70%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Cloud & DevOps -->
-            <div class="card skill-card">
-              <div class="card-body">
-                <div class="skill-title">
-                  <span class="skill-logo"><i class="fab fa-aws fa-lg" style="color: #FF9900"></i></span>
-                  <h5 class="card-title">AWS</h5>
-                </div>
-                <div class="progress-container">
-                  <div class="progress-bar">
-                    <div class="progress-bar-inner info" style="width: 85%">85%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card skill-card">
-              <div class="card-body">
-                <div class="skill-title">
-                  <span class="skill-logo"><i class="fab fa-google fa-lg" style="color: #4285F4"></i></span>
-                  <h5 class="card-title">GCP</h5>
-                </div>
-                <div class="progress-container">
-                  <div class="progress-bar">
-                    <div class="progress-bar-inner warning" style="width: 80%">80%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card skill-card">
-              <div class="card-body">
-                <div class="skill-title">
-                  <span class="skill-logo"><i class="fab fa-docker fa-lg" style="color: #2496ED"></i></span>
-                  <h5 class="card-title">Docker</h5>
-                </div>
-                <div class="progress-container">
-                  <div class="progress-bar">
-                    <div class="progress-bar-inner success" style="width: 90%">90%</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
+          
+          <div class="carousel-controls">
+            <button class="carousel-control" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-control" id="next-btn"><i class="fas fa-chevron-right"></i></button>
           </div>
         </section>
       </section>
 
       <!-- Updated Projects Section -->
       <section id="projects">
-        <div class="container">
+        <div class="container"></div>
           <div class="row mb-4 mt-4">
             <div class="col text-center text-uppercase mt-4">
               <h2>Projects</h2>

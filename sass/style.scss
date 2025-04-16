@@ -388,3 +388,77 @@ html {
   gap: 15px;
 }
 
+/* Skills carousel styling */
+#skills-carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.skills-slide-track {
+  display: flex;
+  width: calc(250px * 12); /* Adjust based on number of skill cards and their width */
+  animation: scroll 30s linear infinite;
+}
+
+.skills-slide {
+  width: 250px;
+  flex-shrink: 0;
+  padding: 0 15px;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 4)); } /* Adjust based on the number of cards you want to scroll through */
+}
+
+@keyframes scrollReverse {
+  0% { transform: translateX(calc(-250px * 4)); }
+  100% { transform: translateX(0); }
+}
+
+/* Pause animation on hover */
+.skills-slide-track:hover {
+  animation-play-state: paused;
+}
+
+/* Category label styling */
+.skills-category {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skills-category h3 {
+  display: inline-block;
+  background: #343a40;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Control buttons styling */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.carousel-control {
+  background: #343a40;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-control:hover {
+  background: #495057;
+}
+
