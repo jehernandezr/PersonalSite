@@ -200,6 +200,11 @@ html body footer a:hover {
   justify-content: space-between;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+.skill-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
 
 .skill-card:hover {
   transform: scale(1.05);
@@ -232,6 +237,7 @@ html body footer a:hover {
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
+  gap: 10px;
 }
 
 .skill-title h5 {
@@ -406,6 +412,13 @@ html body footer a:hover {
 
 .work-description {
   padding: 15px 20px;
+}
+
+/* Style enhancements moved from inline HTML */
+.fixed-progress {
+  height: 20px; /* Ensures all progress bars have the same height */
+  width: 90%; /* Ensures all progress bars have the same width */
+  margin: 0 auto; /* Centers the progress bar within the card */
 }
 
 /*# sourceMappingURL=style.css.map */
