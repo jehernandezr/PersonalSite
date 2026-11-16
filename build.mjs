@@ -78,6 +78,14 @@ const t = {
           ],
         },
         {
+          name: "ANB Rising Stars Showcase",
+          text: "Plataforma donde jugadores de baloncesto suben sus videos, un worker los procesa en segundo plano (recorte, resolución y marca de agua) y el público y los jurados votan en un ranking en vivo. La llevamos por cinco etapas en AWS, de local a balanceo de carga, autoescalado y PaaS, con pruebas de carga en cada una. Proyecto en equipo del curso de desarrollo en la nube de la maestría.",
+          stack: "Python, FastAPI, PostgreSQL, Kafka, AWS, Docker",
+          links: [
+            ["Código", "https://github.com/dso-uniandes/desarrollo-de-software-en-la-nube"],
+          ],
+        },
+        {
           name: "Rectángulos Bouncing",
           text: "Juego 2D en Python construido con arquitectura ECS (Entity Component System): escenas, sistemas de física y disparo, y un game loop asíncrono que permite jugarlo en el navegador. Proyecto del curso de desarrollo de videojuegos de la maestría.",
           stack: "Python, pygame, esper (ECS)",
@@ -245,6 +253,14 @@ const t = {
           stack: "Python, FastAPI, Kubernetes, AWS, Terraform, React Native, Angular",
           links: [
             ["Code", "https://github.com/MISOG6ProyectoFinal/solventa"],
+          ],
+        },
+        {
+          name: "ANB Rising Stars Showcase",
+          text: "A platform where basketball players upload their videos, a worker processes them in the background (trimming, resolution and watermark), and the public and judges vote on a live ranking. We took it through five stages on AWS, from local to load balancing, autoscaling and PaaS, with load tests at each one. Team project for the cloud development course in my master's.",
+          stack: "Python, FastAPI, PostgreSQL, Kafka, AWS, Docker",
+          links: [
+            ["Code", "https://github.com/dso-uniandes/desarrollo-de-software-en-la-nube"],
           ],
         },
         {
