@@ -23,6 +23,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Public+Sans:wght@400;600&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <script type="module" src="vendor/ui-sdk/web.js"></script>
+  <script type="module">
+    matchMedia("(min-width: 52.01rem)").addEventListener("change", (event) => {
+      if (event.matches) document.querySelector(".menu")?.api?.close();
+    });
+  </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jonatan Hernandez","jobTitle":"Backend Squad Lead","worksFor":{"@type":"Organization","name":"tyba"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Universidad de los Andes"},"url":"https://jonatanhr.com","image":"https://jonatanhr.com/assets/jonatan-960.jpg","sameAs":["https://github.com/jehernandezr","https://www.linkedin.com/in/jonatan-hernandez-rubio/"]}</script>
 </head>
 <body>
@@ -38,6 +44,23 @@
         <a href="#contact">Contacto</a>
         <a class="lang" href="/en/" hreflang="en" lang="en">English</a>
       </nav>
+      <ui-drawer class="menu" side="end">
+        <ui-drawer-trigger><button type="button" class="menu-button">Menú</button></ui-drawer-trigger>
+        <ui-drawer-backdrop hidden></ui-drawer-backdrop>
+        <ui-drawer-content hidden>
+          <div class="menu-head">
+            <ui-drawer-title>Menú del sitio</ui-drawer-title>
+            <ui-drawer-close><button type="button" class="menu-close">Cerrar menú</button></ui-drawer-close>
+          </div>
+          <ul class="menu-links">
+            <li><ui-drawer-close><a href="#experience">Experiencia</a></ui-drawer-close></li>
+            <li><ui-drawer-close><a href="#projects">Proyectos</a></ui-drawer-close></li>
+            <li><ui-drawer-close><a href="#education">Formación</a></ui-drawer-close></li>
+            <li><ui-drawer-close><a href="#contact">Contacto</a></ui-drawer-close></li>
+          </ul>
+          <ui-drawer-close><a class="lang" href="/en/" hreflang="en" lang="en">English</a></ui-drawer-close>
+        </ui-drawer-content>
+      </ui-drawer>
     </div>
   </header>
 
@@ -67,20 +90,29 @@
         <div class="body">
           <div class="org">
             <div class="org-head"><h3>tyba</h3><span class="when">2021 – hoy</span></div>
-            <ol class="roles">
-              <li class="current">
-                <span class="role-title">Backend Squad Lead</span> <span class="role-when">May 2023 – hoy</span>
+            <ui-timeline class="roles" aria-label="Cargos en tyba">
+              <ui-timeline-item value="2023-05" status="current">
+                <ui-timeline-marker></ui-timeline-marker>
+                <ui-timeline-connector></ui-timeline-connector>
+                <ui-timeline-title class="role-title">Backend Squad Lead</ui-timeline-title>
+                <ui-timeline-time class="role-when"><time datetime="2023-05">May 2023 – hoy</time></ui-timeline-time>
                 <ul><li>Lidero el squad backend del producto de fondos mutuos en Chile y del producto FIC en Colombia.</li><li>Acompaño a más de 5 ingenieros con feedback y planes de desarrollo; varios de ellos ya lideran sus propios squads.</li><li>He entregado más de 5 proyectos entre equipos de punta a punta y mejoré en un 15 % los procesos transaccionales clave.</li><li>Defino con negocio más de 12 épicas por planeación y uso LLMs para escribir alcances y criterios de aceptación más claros.</li></ul>
-              </li>
-              <li>
-                <span class="role-title">Backend Engineer</span> <span class="role-when">Ene 2022 – May 2023</span>
+              </ui-timeline-item>
+              <ui-timeline-item value="2022-01" status="complete">
+                <ui-timeline-marker></ui-timeline-marker>
+                <ui-timeline-connector></ui-timeline-connector>
+                <ui-timeline-title class="role-title">Backend Engineer</ui-timeline-title>
+                <ui-timeline-time class="role-when"><time datetime="2022-01">Ene 2022 – May 2023</time></ui-timeline-time>
                 <p>Diseñé y entregué más de 5 funcionalidades clave usadas en 3 productos, y propuse más de 10 mejoras entre equipos.</p>
-              </li>
-              <li>
-                <span class="role-title">Software Engineer Intern</span> <span class="role-when">Jul 2021 – Ene 2022</span>
+              </ui-timeline-item>
+              <ui-timeline-item value="2021-07" status="complete">
+                <ui-timeline-marker></ui-timeline-marker>
+                <ui-timeline-connector></ui-timeline-connector>
+                <ui-timeline-title class="role-title">Software Engineer Intern</ui-timeline-title>
+                <ui-timeline-time class="role-when"><time datetime="2021-07">Jul 2021 – Ene 2022</time></ui-timeline-time>
                 <p>Desarrollo serverless en AWS: endpoints REST, funciones Lambda, cron jobs en Fargate y transacciones orquestadas entre servicios.</p>
-              </li>
-            </ol>
+              </ui-timeline-item>
+            </ui-timeline>
           </div>
           <div class="org">
             <div class="org-head"><h3>GurUh</h3><span class="when">2020 – 2022</span></div>

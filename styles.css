@@ -73,6 +73,58 @@ a:hover { text-decoration-color: currentColor; }
 .site-nav a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--frailejon); }
 .site-nav .lang { color: var(--ink); font-weight: 600; }
 
+/* Menú para celular: solo cuando el drawer ya está definido; sin JS queda el nav */
+.menu { display: none; }
+.menu-button, .menu-close {
+  font: inherit;
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 2px var(--ink);
+  min-height: 2.75rem;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+}
+.menu-button:hover, .menu-close:hover { background: var(--surface); }
+ui-drawer-backdrop { position: fixed; inset: 0; background: rgb(10 16 13 / 0.45); }
+ui-drawer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: min(21rem, 100% - 3rem);
+  height: 100%;
+  padding: 1.25rem var(--gutter) 2rem;
+  background: var(--paper);
+  color: var(--ink);
+  border-left: 1px solid var(--lichen);
+  overflow-y: auto;
+}
+.menu-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+ui-drawer-title { margin: 0; font-family: var(--display); font-size: var(--step-0); font-weight: 600; color: var(--moss); }
+.menu-close { box-shadow: inset 0 0 0 1px var(--moss); }
+.menu-links { list-style: none; margin: 0; padding: 0; }
+.menu-links a {
+  display: block;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--lichen);
+  font-family: var(--display);
+  font-size: var(--step-2);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+.menu-links a:hover { text-decoration: underline; text-decoration-color: var(--frailejon); }
+ui-drawer-content .lang { font-weight: 600; }
+
+@media (max-width: 52rem) {
+  .site-header .wrap:has(.menu:defined) { align-items: center; flex-wrap: nowrap; }
+  .site-header .wrap:has(.menu:defined) .site-nav { display: none; }
+  .menu:defined { display: block; }
+}
+
 /* Portada: el único momento llamativo */
 .hero { padding-block: clamp(2.5rem, 6vw, 6rem) clamp(3rem, 7vw, 6.5rem); }
 .hero .wrap { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
@@ -134,13 +186,14 @@ a:hover { text-decoration-color: currentColor; }
 .org + .org { margin-top: 3rem; }
 .org-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 1rem; align-items: baseline; margin-bottom: 1.25rem; }
 .org-head .when { font-size: var(--step--1); color: var(--moss); }
-.roles { list-style: none; margin: 0; padding: 0 0 0 1.25rem; border-left: 2px solid var(--lichen); }
-.roles > li { position: relative; }
-.roles > li + li { margin-top: 1.5rem; }
-.roles > li::before {
-  content: "";
+.roles { display: block; margin: 0; padding: 0; }
+.roles ui-timeline-item { display: block; position: relative; padding-left: calc(1.25rem + 2px); }
+.roles ui-timeline-item + ui-timeline-item { margin-top: 1.5rem; }
+.roles ui-timeline-item:focus-visible { outline-offset: 6px; }
+.roles ui-timeline-marker {
   position: absolute;
-  left: calc(-1.25rem - 6px);
+  z-index: 1;
+  left: -4px;
   top: 0.45em;
   width: 10px;
   height: 10px;
@@ -148,10 +201,13 @@ a:hover { text-decoration-color: currentColor; }
   background: var(--paper);
   box-shadow: inset 0 0 0 2px var(--moss);
 }
-.roles > li.current::before { background: var(--frailejon); box-shadow: none; }
+.roles ui-timeline-item[status="current"] ui-timeline-marker { background: var(--frailejon); box-shadow: none; }
+.roles ui-timeline-connector { position: absolute; left: 0; top: 0; bottom: -1.5rem; width: 2px; background: var(--lichen); }
+.roles ui-timeline-item:last-child ui-timeline-connector { bottom: 0; }
+.roles ui-timeline-title, .roles ui-timeline-time { display: inline; }
 .role-title { font-weight: 600; }
 .role-when { font-size: var(--step--1); color: var(--moss); }
-.roles ul { margin: 0.5rem 0 0; padding-left: 1.1rem; }
+.roles ul { margin: 0.5rem 0 0; padding-left: 1.1rem; list-style: circle; }
 .roles ul li + li { margin-top: 0.35rem; }
 .org p { margin: 0.5rem 0 0; }
 
@@ -185,10 +241,10 @@ a:hover { text-decoration-color: currentColor; }
 @media (max-width: 52rem) {
   .hero .wrap { grid-template-columns: 1fr; }
   .portrait { grid-row: 1; width: min(60%, 14rem); justify-self: start; }
-  .section .wrap, .site-footer .wrap { grid-template-columns: 1fr; }
+  .section .wrap, .site-footer .wrap { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media print {
-  .site-nav, .actions, .portrait { display: none; }
+  .site-nav, .menu, .actions, .portrait { display: none !important; }
   body { background: #fff; color: #000; }
 }

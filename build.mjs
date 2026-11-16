@@ -16,6 +16,7 @@ const t = {
       "Backend Squad Lead en tyba (Bogotá). Lidero equipos backend para productos de fondos de inversión en Chile y Colombia. Maestría en Ingeniería de Software en Los Andes.",
     skip: "Saltar al contenido",
     nav: { experience: "Experiencia", projects: "Proyectos", education: "Formación", contact: "Contacto" },
+    menu: { open: "Menú", title: "Menú del sitio", close: "Cerrar menú" },
     headline: "Construyo y lidero backends para productos de inversión.",
     lede: `Soy <strong>Backend Squad Lead en tyba</strong>, en Bogotá. Llevo a mi equipo de la planeación a producción en fondos de inversión para Chile y Colombia, y estudio la Maestría en Ingeniería de Software en Los Andes.`,
     email: "Escríbeme en LinkedIn",
@@ -24,10 +25,12 @@ const t = {
       title: "Experiencia",
       tyba: {
         when: "2021 – hoy",
+        rolesLabel: "Cargos en tyba",
         roles: [
           {
             title: "Backend Squad Lead",
             when: "May 2023 – hoy",
+            start: "2023-05",
             points: [
               "Lidero el squad backend del producto de fondos mutuos en Chile y del producto FIC en Colombia.",
               "Acompaño a más de 5 ingenieros con feedback y planes de desarrollo; varios de ellos ya lideran sus propios squads.",
@@ -38,11 +41,13 @@ const t = {
           {
             title: "Backend Engineer",
             when: "Ene 2022 – May 2023",
+            start: "2022-01",
             points: ["Diseñé y entregué más de 5 funcionalidades clave usadas en 3 productos, y propuse más de 10 mejoras entre equipos."],
           },
           {
             title: "Software Engineer Intern",
             when: "Jul 2021 – Ene 2022",
+            start: "2021-07",
             points: ["Desarrollo serverless en AWS: endpoints REST, funciones Lambda, cron jobs en Fargate y transacciones orquestadas entre servicios."],
           },
         ],
@@ -141,6 +146,7 @@ const t = {
       "Backend Squad Lead at tyba (Bogotá). I lead backend teams for investment fund products in Chile and Colombia. M.Sc. in Software Engineering at Los Andes University.",
     skip: "Skip to content",
     nav: { experience: "Experience", projects: "Projects", education: "Education", contact: "Contact" },
+    menu: { open: "Menu", title: "Site menu", close: "Close menu" },
     headline: "I build and lead backends for investment products.",
     lede: `I'm a <strong>Backend Squad Lead at tyba</strong> in Bogotá. I take my squad from planning to production on investment fund products for Chile and Colombia, and I'm pursuing an M.Sc. in Software Engineering at Los Andes University.`,
     email: "Message me on LinkedIn",
@@ -149,10 +155,12 @@ const t = {
       title: "Experience",
       tyba: {
         when: "2021 – present",
+        rolesLabel: "Roles at tyba",
         roles: [
           {
             title: "Backend Squad Lead",
             when: "May 2023 – present",
+            start: "2023-05",
             points: [
               "I lead the backend squad for the mutual funds product in Chile and the FIC product in Colombia.",
               "I mentor 5+ engineers through feedback and development plans; several of them now lead their own squads.",
@@ -163,11 +171,13 @@ const t = {
           {
             title: "Backend Engineer",
             when: "Jan 2022 – May 2023",
+            start: "2022-01",
             points: ["Designed and delivered 5+ key features used across 3 products, and proposed 10+ cross-team improvements."],
           },
           {
             title: "Software Engineer Intern",
             when: "Jul 2021 – Jan 2022",
+            start: "2021-07",
             points: ["Serverless development on AWS: REST endpoints, Lambda functions, Fargate cron jobs and transactions orchestrated across services."],
           },
         ],
@@ -268,12 +278,23 @@ function page(lang) {
   const roles = c.experience.tyba.roles
     .map(
       (r, i) => `
-              <li${i === 0 ? ' class="current"' : ""}>
-                <span class="role-title">${r.title}</span> <span class="role-when">${r.when}</span>
+              <ui-timeline-item value="${r.start}" status="${i === 0 ? "current" : "complete"}">
+                <ui-timeline-marker></ui-timeline-marker>
+                <ui-timeline-connector></ui-timeline-connector>
+                <ui-timeline-title class="role-title">${r.title}</ui-timeline-title>
+                <ui-timeline-time class="role-when"><time datetime="${r.start}">${r.when}</time></ui-timeline-time>
                 ${r.points.length > 1 ? `<ul>${r.points.map((p) => `<li>${p}</li>`).join("")}</ul>` : `<p>${r.points[0]}</p>`}
-              </li>`
+              </ui-timeline-item>`
     )
     .join("");
+
+  const sections = [
+    ["#experience", c.nav.experience],
+    ["#projects", c.nav.projects],
+    ["#education", c.nav.education],
+    ["#contact", c.nav.contact],
+  ];
+  const langLink = `<a class="lang" href="${c.other.path}" hreflang="${c.other.lang}" lang="${c.other.lang}">${c.other.label}</a>`;
 
   const projects = c.projects.items
     .map(
@@ -315,6 +336,12 @@ function page(lang) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Public+Sans:wght@400;600&display=swap">
   <link rel="stylesheet" href="${root}styles.css">
+  <script type="module" src="${root}vendor/ui-sdk/web.js"></script>
+  <script type="module">
+    matchMedia("(min-width: 52.01rem)").addEventListener("change", (event) => {
+      if (event.matches) document.querySelector(".menu")?.api?.close();
+    });
+  </script>
   <script type="application/ld+json">${JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
@@ -334,12 +361,23 @@ function page(lang) {
     <div class="wrap">
       <a class="brand" href="${c.path}">Jonatan Hernandez</a>
       <nav class="site-nav" aria-label="${lang === "es" ? "Principal" : "Main"}">
-        <a href="#experience">${c.nav.experience}</a>
-        <a href="#projects">${c.nav.projects}</a>
-        <a href="#education">${c.nav.education}</a>
-        <a href="#contact">${c.nav.contact}</a>
-        <a class="lang" href="${c.other.path}" hreflang="${c.other.lang}" lang="${c.other.lang}">${c.other.label}</a>
+        ${sections.map(([href, label]) => `<a href="${href}">${label}</a>`).join("\n        ")}
+        ${langLink}
       </nav>
+      <ui-drawer class="menu" side="end">
+        <ui-drawer-trigger><button type="button" class="menu-button">${c.menu.open}</button></ui-drawer-trigger>
+        <ui-drawer-backdrop hidden></ui-drawer-backdrop>
+        <ui-drawer-content hidden>
+          <div class="menu-head">
+            <ui-drawer-title>${c.menu.title}</ui-drawer-title>
+            <ui-drawer-close><button type="button" class="menu-close">${c.menu.close}</button></ui-drawer-close>
+          </div>
+          <ul class="menu-links">
+            ${sections.map(([href, label]) => `<li><ui-drawer-close><a href="${href}">${label}</a></ui-drawer-close></li>`).join("\n            ")}
+          </ul>
+          <ui-drawer-close>${langLink}</ui-drawer-close>
+        </ui-drawer-content>
+      </ui-drawer>
     </div>
   </header>
 
@@ -369,8 +407,8 @@ function page(lang) {
         <div class="body">
           <div class="org">
             <div class="org-head"><h3>tyba</h3><span class="when">${c.experience.tyba.when}</span></div>
-            <ol class="roles">${roles}
-            </ol>
+            <ui-timeline class="roles" aria-label="${c.experience.tyba.rolesLabel}">${roles}
+            </ui-timeline>
           </div>
           <div class="org">
             <div class="org-head"><h3>GurUh</h3><span class="when">${c.experience.guruh.when}</span></div>
