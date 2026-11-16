@@ -1,13 +1,13 @@
-# Entrega 1:
-This repository contains the first assignment for the course development with web technologies. 
+# jonatanhr.com
 
-# Description:
-This page contains an overall description of me, like a CV, it has info about: 
-* Who I am.
-* What I do.
-* Wich my interests and projects are.
-* My academic background.
+Sitio personal de Jonatan Hernandez, publicado con GitHub Pages en https://jonatanhr.com.
 
-# Link to visit the personal website:
-https://jehernandezr.github.io/PersonalSite/
+- `build.mjs` tiene todo el contenido en español e inglés y genera `index.html` y `en/index.html`.
+- `styles.css` define el diseño.
+- `assets/` guarda la foto optimizada.
 
+Para cambiar el contenido, edita `build.mjs` y ejecuta:
+
+```bash
+node build.mjs
+```

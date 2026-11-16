@@ -1,650 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Personal Site</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Jonatan Hernandez" />
-    <meta
-      name="description"
-      content="This website contains personal information, hobbies, and programming skills."
-    />
-    <meta name="twitter:title" content="Jonatan Personal Site" />
-    <meta
-      property="og:image"
-      content="https://jehernandezr.github.io/PersonalSite/images/logo.png"
-    />
-    <meta
-      property="og:description"
-      content="This website contains personal information, hobbies, and programming skills."
-    />
-    <meta property="og:title" content="Jonatan Personal Site" />
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jonatan Hernandez | Backend Squad Lead</title>
+  <meta name="description" content="Backend Squad Lead en tyba (Bogotá). Lidero equipos backend para productos de fondos de inversión en Chile y Colombia. Maestría en Ingeniería de Software en Los Andes.">
+  <link rel="canonical" href="https://jonatanhr.com/">
+  <link rel="alternate" hreflang="es" href="https://jonatanhr.com/">
+  <link rel="alternate" hreflang="en" href="https://jonatanhr.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://jonatanhr.com/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Jonatan Hernandez | Backend Squad Lead">
+  <meta property="og:description" content="Backend Squad Lead en tyba (Bogotá). Lidero equipos backend para productos de fondos de inversión en Chile y Colombia. Maestría en Ingeniería de Software en Los Andes.">
+  <meta property="og:url" content="https://jonatanhr.com/">
+  <meta property="og:image" content="https://jonatanhr.com/assets/jonatan-960.jpg">
+  <meta property="og:locale" content="es_CO">
+  <meta name="theme-color" content="#f2f4ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141d18" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-icon-152x152.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Public+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jonatan Hernandez","jobTitle":"Backend Squad Lead","worksFor":{"@type":"Organization","name":"tyba"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Universidad de los Andes"},"url":"https://jonatanhr.com","image":"https://jonatanhr.com/assets/jonatan-960.jpg","sameAs":["https://github.com/jehernandezr","https://www.linkedin.com/in/jonatan-hernandez-rubio/"]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
 
-    <link rel="icon" href="/images/favicon.ico" type="image/png" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
-      rel="stylesheet"
-    />
-    <link href="sass/style.css" rel="stylesheet" />
-  </head>
-
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <a class="navbar-brand" href="#welcome">Jonatan Hernandez R.</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a href="#about" class="nav-link">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a href="#projects" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="#hobbies" class="nav-link">Hobbies</a>
-            </li>
-          </ul>
-        </div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">Jonatan Hernandez</a>
+      <nav class="site-nav" aria-label="Principal">
+        <a href="#experience">Experiencia</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#education">Formación</a>
+        <a href="#contact">Contacto</a>
+        <a class="lang" href="/en/" hreflang="en" lang="en">English</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section id="welcome">
-        <div
-          id="carousel"
-          class="carousel slide"
-          data-ride="carousel"
-          data-pause="false"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="images/coding.png" class="d-block w-100" alt="Coding" />
-            </div>
-            <div class="carousel-item">
-              <img src="images/laptop.jpg" class="d-block w-100" alt="Laptop" />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="images/series.jpg"
-                class="d-block w-100"
-                alt="Watching Series"
-              />
-            </div>
-          </div>
-          <div class="overlay">
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-md-6">
-                  <h1 class="text-light">Jonatan Hernandez</h1>
-                  <p class="text-light">
-                    Hello and welcome to my website! I'm a Software Developer.
-                  </p>
-                </div>
-              </div>
-            </div>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Construyo y lidero backends para productos de inversión.</h1>
+          <p class="lede">Soy <strong>Backend Squad Lead en tyba</strong>, en Bogotá. Llevo a mi equipo de la planeación a producción en fondos de inversión para Chile y Colombia, y estudio la Maestría en Ingeniería de Software en Los Andes.</p>
+          <div class="actions">
+            <a class="button" href="https://www.linkedin.com/in/jonatan-hernandez-rubio/" rel="noopener">Escríbeme en LinkedIn</a>
+            <a class="plain" href="https://github.com/jehernandezr" rel="noopener">GitHub</a>
           </div>
         </div>
-      </section>
-
-      <!-- About Me Section -->
-      <section id="about">
-        <div class="container my-4">
-          <div class="row mb-4">
-            <div class="col text-center">
-              <h2>About Me</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-10 offset-md-1">
-              <div class="card mb-4">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img
-                      src="images/envioreal.jpg"
-                      class="card-img rounded"
-                      alt="Me"
-                    />
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title text-center">Some History</h5>
-                      <p class="card-text">
-                        I'm from Colombia. B.Sc. in Systems and Computing
-                        Engineering at Los Andes University. Currently pursuing
-                        an M.Sc in Software Engineering. I enjoy solving
-                        problems and learning new things.
-                      </p>
-                      <h5 class="card-title text-center mt-4">Reach Me By</h5>
-                      <div class="text-center">
-                        <a
-                          href="https://github.com/jehernandezr"
-                          target="_blank"
-                          rel="noreferrer"
-                          ><i class="fab fa-github-square fa-2x"></i
-                        ></a>
-                        <a
-                          href="https://www.linkedin.com/in/jonatan-hernandez-rubio/"
-                          target="_blank"
-                          rel="noreferrer"
-                          ><i class="fab fa-linkedin fa-2x"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="portrait">
+          <picture>
+            <source type="image/webp" srcset="assets/jonatan-480.webp 480w, assets/jonatan-960.webp 960w" sizes="(max-width: 52rem) 14rem, 22rem">
+            <img src="assets/jonatan-480.jpg" srcset="assets/jonatan-480.jpg 480w, assets/jonatan-960.jpg 960w" sizes="(max-width: 52rem) 14rem, 22rem" width="480" height="480" alt="Foto de Jonatan Hernandez">
+          </picture>
         </div>
+      </div>
+    </section>
 
-        <!-- Timeline -->
-        <div class="container py-2">
-          <h2 class="text-muted text-center font-weight-dark">
-            Academic History
-          </h2>
-
-          <div class="row">
-            <div class="col-auto text-center flex-column d-none d-sm-flex">
-              <div class="row h-50">
-                <div class="col border-right">&nbsp;</div>
-                <div class="col">&nbsp;</div>
-              </div>
-              <h5 class="m-2">
-                <span class="badge badge-pill bg-light border">&nbsp;</span>
-              </h5>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="float-right text-muted">2016 - 2017</div>
-                  <h4 class="card-title text-muted">Technician</h4>
-                  <p class="card-text">
-                    Technician on installation of computer networks at Sena
-                    institute in Colombia.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <h2 id="experience-title">Experiencia</h2>
+        <div class="body">
+          <div class="org">
+            <div class="org-head"><h3>tyba</h3><span class="when">2021 – hoy</span></div>
+            <ol class="roles">
+              <li class="current">
+                <span class="role-title">Backend Squad Lead</span> <span class="role-when">May 2023 – hoy</span>
+                <ul><li>Lidero el squad backend del producto de fondos mutuos en Chile y del producto FIC en Colombia.</li><li>Acompaño a más de 5 ingenieros con feedback y planes de desarrollo; varios de ellos ya lideran sus propios squads.</li><li>He entregado más de 5 proyectos entre equipos de punta a punta y mejoré en un 15 % los procesos transaccionales clave.</li><li>Defino con negocio más de 12 épicas por planeación y uso LLMs para escribir alcances y criterios de aceptación más claros.</li></ul>
+              </li>
+              <li>
+                <span class="role-title">Backend Engineer</span> <span class="role-when">Ene 2022 – May 2023</span>
+                <p>Diseñé y entregué más de 5 funcionalidades clave usadas en 3 productos, y propuse más de 10 mejoras entre equipos.</p>
+              </li>
+              <li>
+                <span class="role-title">Software Engineer Intern</span> <span class="role-when">Jul 2021 – Ene 2022</span>
+                <p>Desarrollo serverless en AWS: endpoints REST, funciones Lambda, cron jobs en Fargate y transacciones orquestadas entre servicios.</p>
+              </li>
+            </ol>
           </div>
-
-          <div class="row">
-            <div class="col-auto text-center flex-column d-none d-sm-flex">
-              <div class="row h-50">
-                <div class="col border-right">&nbsp;</div>
-                <div class="col">&nbsp;</div>
-              </div>
-              <h5 class="m-2">
-                <span class="badge badge-pill bg-light border">&nbsp;</span>
-              </h5>
-            </div>
-            <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <div class="float-right text-muted">2018 - 2022</div>
-                  <h4 class="card-title text-muted">College</h4>
-                  <p class="card-text">
-                    B.Sc in Systems and Computing Engineering from Los Andes
-                    University Bogotá, Colombia.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-auto text-center flex-column d-none d-sm-flex">
-              <div class="row h-50">
-                <div class="col border-right">&nbsp;</div>
-                <div class="col">&nbsp;</div>
-              </div>
-              <h5 class="m-2">
-                <span class="badge badge-pill bg-success">&nbsp;</span>
-              </h5>
-            </div>
-            <div class="col py-2">
-              <div class="card border-success shadow">
-                <div class="card-body">
-                  <div class="float-right text-success">2025 - Present</div>
-                  <h4 class="card-title text-success">College</h4>
-                  <p class="card-text">
-                    M.Sc in Software Engineering from Los Andes University
-                    Bogotá, Colombia.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Working Experience -->
-        <div id="workxp" class="container">
-          <h2 class="text-muted text-center font-weight-dark mb-4">
-            Work Experience
-          </h2>
-          <div class="row justify-content-center">
-            <div class="col-md-10">
-              <!-- Entrepreneur -->
-              <div class="card work-card">
-                <div class="row no-gutters">
-                  <div class="col-md-2 logo-column">
-                    <div class="work-logo-container">
-                      <img src="images/logos/guruh-logo.png" alt="Guruh" class="work-logo" onerror="this.src='images/apple-icon-152x152.png'">
-                    </div>
-                  </div>
-                  <div class="col-md-10">
-                    <div class="card-body work-description">
-                      <div class="float-right text-muted">2020 - 2022</div>
-                      <h5 class="card-title">Entrepreneur</h5>
-                      <p class="card-text text-justify">
-                        Me and my team worked on a startup called
-                        Guruh. We try to help high school students by giving
-                        them information about careers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Internship at Tyba -->
-              <div class="card work-card">
-                <div class="row no-gutters">
-                  <div class="col-md-2 logo-column">
-                    <div class="work-logo-container">
-                      <i class="fas fa-briefcase work-icon"></i>
-                    </div>
-                  </div>
-                  <div class="col-md-10">
-                    <div class="card-body work-description">
-                      <div class="float-right text-muted">2022 - 2023</div>
-                      <h5 class="card-title">Internship at Tyba</h5>
-                      <p class="card-text text-justify">
-                        Started my professional journey as an intern at Tyba, where I developed my skills in backend development
-                        and gained hands-on experience with real-world applications.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Backend Engineer at Tyba -->
-              <div class="card work-card">
-                <div class="row no-gutters">
-                  <div class="col-md-2 logo-column">
-                    <div class="work-logo-container">
-                      <i class="fas fa-code work-icon"></i>
-                    </div>
-                  </div>
-                  <div class="col-md-10">
-                    <div class="card-body work-description">
-                      <div class="float-right text-muted">2023 - 2024</div>
-                      <h5 class="card-title">Backend Engineer at Tyba</h5>
-                      <p class="card-text text-justify">
-                        Promoted to Backend Engineer, where I designed and implemented robust API solutions, 
-                        optimized database performance, and integrated third-party services to enhance platform capabilities.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Backend Squad Lead -->
-              <div class="card work-card">
-                <div class="row no-gutters">
-                  <div class="col-md-2 logo-column">
-                    <div class="work-logo-container">
-                      <i class="fas fa-users-cog work-icon"></i>
-                    </div>
-                  </div>
-                  <div class="col-md-10">
-                    <div class="card-body work-description">
-                      <div class="float-right text-muted">2024 - Present</div>
-                      <h5 class="card-title">Backend Squad Lead</h5>
-                      <p class="card-text text-justify">
-                        Currently leading the backend development team, coordinating project efforts, mentoring junior developers,
-                        and driving implementation of best practices while managing critical infrastructure.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Skills Section with Horizontal Auto-Scrolling Carousel -->
-        <section id="skills" class="container skills-section">
-          <h2 class="text-center mb-4">Skills</h2>
-          
-          <!-- Programming Languages Section -->
-          <div class="skills-category">
-            <h3>Technical Skills</h3>
-          </div>
-          
-          <div id="skills-carousel">
-            <div class="skills-slide-track">
-              <!-- Programming Languages Skills -->
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fab fa-python" style="color: #3776AB; font-size: 24px;"></i></span>
-                    <h5>Python</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner" style="width: 80%">80%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fab fa-java" style="color: #007396; font-size: 24px;"></i></span>
-                    <h5>Java</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner warning" style="width: 90%">90%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fab fa-js-square" style="color: #3178C6; font-size: 24px;"></i></span>
-                    <h5>TypeScript</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner info" style="width: 96%">96%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fab fa-js" style="color: #F7DF1E; font-size: 24px;"></i></span>
-                    <h5>JavaScript</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner success" style="width: 96%">96%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Development Skills -->
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fas fa-code" style="color: #E44D26; font-size: 24px;"></i></span>
-                    <h5>Software Development</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner danger" style="width: 90%">90%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fas fa-sitemap" style="color: #0078D7; font-size: 24px;"></i></span>
-                    <h5>Software Architecture</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner" style="width: 90%">90%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fas fa-brain" style="color: #4CAF50; font-size: 24px;"></i></span>
-                    <h5>Algorithms</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner success" style="width: 70%">70%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Cloud & DevOps -->
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fab fa-aws" style="color: #FF9900; font-size: 24px;"></i></span>
-                    <h5>AWS</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner info" style="width: 85%">85%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fab fa-google" style="color: #4285F4; font-size: 24px;"></i></span>
-                    <h5>GCP</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner warning" style="width: 80%">80%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fab fa-docker" style="color: #2496ED; font-size: 24px;"></i></span>
-                    <h5>Docker</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner success" style="width: 90%">90%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Duplicate first few cards to create seamless scroll effect -->
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fab fa-python" style="color: #3776AB; font-size: 24px;"></i></span>
-                    <h5>Python</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner" style="width: 80%">80%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="skills-slide">
-                <div class="card skill-card">
-                  <div class="skill-title">
-                    <span class="skill-logo"><i class="fab fa-java" style="color: #007396; font-size: 24px;"></i></span>
-                    <h5>Java</h5>
-                  </div>
-                  <div class="progress-container">
-                    <div class="progress-bar">
-                      <div class="progress-bar-inner warning" style="width: 90%">90%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="carousel-controls">
-            <button class="carousel-control" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
-            <button class="carousel-control" id="next-btn"><i class="fas fa-chevron-right"></i></button>
-          </div>
-        </section>
-      </section>
-
-      <!-- Updated Projects Section -->
-      <section id="projects">
-        <div class="container">
-          <div class="row mb-4 mt-4">
-            <div class="col text-center text-uppercase mt-4">
-              <h2>Projects</h2>
-            </div>
-          </div>
-          <div class="card-deck">
-            <div class="card mb-4">
-              <a href="https://github.com/jehernandezr/s4_Empleos_front" target="_blank" rel="noreferrer">
-                <div class="card-image">
-                  <img class="card-img-top" src="images/hiring.png" alt="Hiring Logo">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title text-center">Web App Hiring</h5>
-                  <p class="card-text text-justify text-center">An app to help university students and employers connect for occasional labor opportunities.</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="card mb-4">
-              <a href="https://guruh.co" target="_blank" rel="noreferrer">
-                <div class="card-image">
-                  <img class="card-img-top" src="images/apple-icon-152x152.png" alt="Guruh">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title text-center">Guruh Project</h5>
-                  <p class="card-text text-justify text-center">A platform to guide high school students in choosing their careers by connecting them with college students.</p>
-                </div>
-              </a>
-            </div>
-
-            <div class="card mb-4">
-              <a href="https://github.com/jehernandezr/Sprint3ArquiSoft" target="_blank" rel="noreferrer">
-                <div class="card-image">
-                  <img class="card-img-top" src="images/auth0.png" alt="Auth0 Security">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title text-center">Cipher With Security</h5>
-                  <p class="card-text text-justify text-center">A project implementing Auth0 and Python for enhanced security, including CSRF tokens and request encryption.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Updated Hobbies Section -->
-      <section id="hobbies">
-        <div class="container">
-          <div class="row mb-4 mt-4">
-            <div class="col text-center text-uppercase">
-              <h2>Interests & Hobbies</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 text-center">
-              <img src="images/ai.jpg" class="img-fluid rounded mb-3" alt="Artificial Intelligence">
-              <h5>Artificial Intelligence</h5>
-              <p>Exploring the world of AI and machine learning.</p>
-            </div>
-            <div class="col-md-4 text-center">
-              <img src="images/laptop.jpg" class="img-fluid rounded mb-3" alt="Coding">
-              <h5>Coding</h5>
-              <p>Building innovative solutions through programming.</p>
-            </div>
-            <div class="col-md-4 text-center">
-              <img src="images/series.jpg" class="img-fluid rounded mb-3" alt="Watching Series">
-              <h5>Watching Series</h5>
-              <p>Relaxing with my favorite TV shows and movies.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <div class="container-fluid bg-primary text-light py-4">
-        <div class="row">
-          <div class="col text-center">
-            <div class="mb-2">
-              <a
-                href="https://github.com/jehernandezr"
-                target="_blank"
-                rel="noreferrer"
-                ><i class="fab fa-github-square fa-2x"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/jonatan-hernandez-rubio/"
-                target="_blank"
-                rel="noreferrer"
-                ><i class="fab fa-linkedin fa-2x"></i
-              ></a>
-            </div>
-            <p>Copyright © <span id="current-year"></span> Jonatan Hernandez</p>
+          <div class="org">
+            <div class="org-head"><h3>GurUh</h3><span class="when">2020 – 2022</span></div>
+            <span class="role-title">Cofundador</span>
+            <p>Cofundé una plataforma que ayuda a estudiantes de colegio a elegir carrera y universidad. Construí la API en Node.js, Express y MongoDB, y la desplegué con Docker en AWS y Google Cloud.</p>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
-    ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rR7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Add script.js to include the dynamic year functionality -->
-    <script src="script.js"></script>
-  </body>
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <h2 id="projects-title">Proyectos</h2>
+        <div class="body">
+          <ul class="projects">
+            <li class="project featured">
+              <h3>GurUh</h3>
+              <span class="note">Primer lugar en Harvard WECode 2021</span>
+              <p>Plataforma de orientación vocacional para estudiantes de colegio, que conecta sus intereses con carreras y universidades.</p>
+              <p class="stack">Node.js, Express, MongoDB, Docker</p>
+              <div class="links"><a href="https://guruh.co" rel="noopener">Visitar guruh.co</a></div>
+            </li>
+            <li class="project">
+              <h3>TypeORM Log Transformer</h3>
+              
+              <p>Extensión de VS Code que convierte los logs de TypeORM en SQL legible, con formato e indentación.</p>
+              <p class="stack">TypeScript, API de VS Code</p>
+              <div class="links"><a href="https://marketplace.visualstudio.com/items?itemName=jehernandezr.typeorm-log-transformer" rel="noopener">Ver en el Marketplace</a><a href="https://github.com/jehernandezr/typeorm-log-transformer" rel="noopener">Código</a></div>
+            </li>
+            <li class="project">
+              <h3>Plataforma backend</h3>
+              
+              <p>Base reutilizable para backends de microservicios: NestJS con arquitectura hexagonal, sagas recuperables, mensajería con reintentos e infraestructura en AWS con Terraform. En construcción.</p>
+              <p class="stack">NestJS, TypeORM, Terraform, AWS, Flutter</p>
+              <div class="links"><a href="https://github.com/jehernandezr/node_template" rel="noopener">Código</a></div>
+            </li>
+            <li class="project">
+              <h3>Match silencioso</h3>
+              
+              <p>Concepto de funcionalidad para Spotify: si dos personas de tu círculo escuchan la misma canción en menos de 48 horas, a las dos les llega un aviso. Proyecto de Design Thinking en la maestría.</p>
+              <p class="stack">HTML, CSS, Node.js</p>
+              <div class="links"><a href="https://github.com/jehernandezr/match-silencioso" rel="noopener">Código</a></div>
+            </li>
+            <li class="project">
+              <h3>Pruebas automatizadas sobre Ghost</h3>
+              
+              <p>Estrategia de pruebas automatizadas sobre el CMS Ghost, con registro de las incidencias encontradas. Proyecto en equipo del curso de Pruebas Automatizadas de la maestría.</p>
+              <p class="stack">Pruebas E2E, Ghost</p>
+              <div class="links"><a href="https://github.com/jehernandezr/202512-proyecto-equipo-4" rel="noopener">Código</a><a href="https://github.com/jehernandezr/incidencias-ghost/issues" rel="noopener">Incidencias</a></div>
+            </li>
+          </ul>
+          <p class="more"><a href="https://github.com/jehernandezr?tab=repositories" rel="noopener">Más proyectos en GitHub</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <h2 id="education-title">Formación</h2>
+        <div class="body">
+          <ul class="entries"><li><span class="what">Maestría en Ingeniería de Software</span><span class="muted">Universidad de los Andes, 2025 – 2027 (en curso)</span></li><li><span class="what">Ingeniería de Sistemas y Computación</span><span class="muted">Universidad de los Andes, 2018 – 2022</span></li></ul>
+          <h3 class="sub">Reconocimientos</h3>
+          <ul class="entries"><li><span class="what">Primer lugar, Harvard WECode Startup Competition</span><span class="muted">Con GurUh, 2021</span></li></ul>
+          <h3 class="sub">Certificados</h3>
+          <ul class="entries"><li><span class="what">Full-Stack Web Development Specialization</span><span class="muted">Coursera</span></li><li><span class="what">Google Cloud Computing Foundations Academy</span><span class="muted">Coursera</span></li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stack" aria-labelledby="stack-title">
+      <div class="wrap">
+        <h2 id="stack-title">Tecnologías</h2>
+        <dl class="groups body"><div><dt>Lenguajes</dt><dd>Java, Python, TypeScript, JavaScript, SQL</dd></div><div><dt>Backend</dt><dd>Node.js, NestJS, Express, Spring, Django, Redis</dd></div><div><dt>Frontend</dt><dd>React, Angular, HTML y CSS</dd></div><div><dt>Nube y herramientas</dt><dd>AWS (Lambda, Fargate), Google Cloud, Docker, Terraform, Git</dd></div><div><dt>Pruebas</dt><dd>Jest, JUnit, pruebas E2E</dd></div></dl>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">Contacto</h2>
+        <div class="body">
+          <p>La forma más rápida de hablar conmigo es por LinkedIn.</p>
+          <p class="big"><a href="https://www.linkedin.com/in/jonatan-hernandez-rubio/" rel="noopener">Escríbeme en LinkedIn</a></p>
+          <p>Mis proyectos están en <a href="https://github.com/jehernandezr" rel="noopener">GitHub</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="small"><strong>Fuera del trabajo</strong></p>
+      <p class="small muted">Me gusta explorar la inteligencia artificial, programar proyectos propios y ver series.<br>© 2026 Jonatan Hernandez</p>
+    </div>
+  </footer>
+</body>
 </html>
