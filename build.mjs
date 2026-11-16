@@ -70,6 +70,15 @@ const t = {
           links: [["Visitar guruh.co", "https://guruh.co"]],
         },
         {
+          name: "Rectángulos Bouncing",
+          text: "Juego 2D en Python construido con arquitectura ECS (Entity Component System): escenas, sistemas de física y disparo, y un game loop asíncrono que permite jugarlo en el navegador. Proyecto del curso de desarrollo de videojuegos de la maestría.",
+          stack: "Python, pygame, esper (ECS)",
+          links: [
+            ["Jugar en itch.io", "https://jehernandezr.itch.io/bouncinguniandesrectang"],
+            ["Código", `${GITHUB}/Rectangulos-Bouncing`],
+          ],
+        },
+        {
           name: "TypeORM Log Transformer",
           text: "Extensión de VS Code que convierte los logs de TypeORM en SQL legible, con formato e indentación.",
           stack: "TypeScript, API de VS Code",
@@ -85,6 +94,14 @@ const t = {
           links: [["Código", `${GITHUB}/node_template`]],
         },
         {
+          name: "Simulador del potencial de acción",
+          text: "Simula el potencial de acción de una neurona con el modelo de Hodgkin-Huxley y compara seis métodos numéricos: Euler hacia adelante, hacia atrás y modificado, Runge-Kutta 2 y 4, y odeint. Permite corriente fija o variable, cambiar la temperatura y exportar los resultados.",
+          stack: "Python, NumPy, Matplotlib, Tkinter",
+          links: [
+            ["Código", `${GITHUB}/Cientifica`],
+          ],
+        },
+        {
           name: "Match silencioso",
           text: "Concepto de funcionalidad para Spotify: si dos personas de tu círculo escuchan la misma canción en menos de 48 horas, a las dos les llega un aviso. Proyecto de Design Thinking en la maestría.",
           stack: "HTML, CSS, Node.js",
@@ -97,6 +114,15 @@ const t = {
           links: [
             ["Código", `${GITHUB}/202512-proyecto-equipo-4`],
             ["Incidencias", `${GITHUB}/incidencias-ghost/issues`],
+          ],
+        },
+        {
+          name: "Hiring",
+          text: "Plataforma para que estudiantes universitarios encuentren trabajos ocasionales con contratistas, con ofertas, cuentas de cobro, facturas y calificaciones. Proyecto en equipo de la universidad.",
+          stack: "Java EE, Angular",
+          links: [
+            ["Código del backend", `${GITHUB}/Empleos_Back`],
+            ["Código del frontend", `${GITHUB}/s4_Empleos_front`],
           ],
         },
       ],
@@ -200,6 +226,15 @@ const t = {
           links: [["Visit guruh.co", "https://guruh.co"]],
         },
         {
+          name: "Rectángulos Bouncing",
+          text: "A 2D game in Python built on an ECS (Entity Component System) architecture: scenes, physics and shooting systems, and an asynchronous game loop that makes it playable in the browser. Built for the game development course in my master's.",
+          stack: "Python, pygame, esper (ECS)",
+          links: [
+            ["Play on itch.io", "https://jehernandezr.itch.io/bouncinguniandesrectang"],
+            ["Code", `${GITHUB}/Rectangulos-Bouncing`],
+          ],
+        },
+        {
           name: "TypeORM Log Transformer",
           text: "A VS Code extension that turns TypeORM logs into readable, formatted and indented SQL.",
           stack: "TypeScript, VS Code API",
@@ -215,6 +250,14 @@ const t = {
           links: [["Code", `${GITHUB}/node_template`]],
         },
         {
+          name: "Action potential simulator",
+          text: "Simulates a neuron's action potential with the Hodgkin-Huxley model and compares six numerical methods: forward, backward and modified Euler, Runge-Kutta 2 and 4, and odeint. It supports fixed or variable current, adjustable temperature and exporting the results.",
+          stack: "Python, NumPy, Matplotlib, Tkinter",
+          links: [
+            ["Code", `${GITHUB}/Cientifica`],
+          ],
+        },
+        {
           name: "Match silencioso",
           text: "A feature concept for Spotify: when two people in your circle play the same song within 48 hours, both get a notification. Built for a Design Thinking course in my master's.",
           stack: "HTML, CSS, Node.js",
@@ -227,6 +270,15 @@ const t = {
           links: [
             ["Code", `${GITHUB}/202512-proyecto-equipo-4`],
             ["Issues", `${GITHUB}/incidencias-ghost/issues`],
+          ],
+        },
+        {
+          name: "Hiring",
+          text: "A platform for university students to find occasional jobs with contractors, with offers, invoices, billing statements and ratings. Team project at university.",
+          stack: "Java EE, Angular",
+          links: [
+            ["Backend code", `${GITHUB}/Empleos_Back`],
+            ["Frontend code", `${GITHUB}/s4_Empleos_front`],
           ],
         },
       ],
