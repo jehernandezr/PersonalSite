@@ -70,6 +70,14 @@ const t = {
           links: [["Visitar guruh.co", "https://guruh.co"]],
         },
         {
+          name: "Solventa",
+          text: "Plataforma de seguros de vida para créditos hipotecarios que se integra al proceso de crédito de un banco: cotización en tiempo real con datos de Open Finance, pólizas, pagos y siniestros. Backend de 9 microservicios desplegados en AWS EKS con Terraform, app móvil y web con micro frontends. Proyecto final de la maestría, en equipo.",
+          stack: "Python, FastAPI, Kubernetes, AWS, Terraform, React Native, Angular",
+          links: [
+            ["Código", "https://github.com/MISOG6ProyectoFinal/solventa"],
+          ],
+        },
+        {
           name: "Rectángulos Bouncing",
           text: "Juego 2D en Python construido con arquitectura ECS (Entity Component System): escenas, sistemas de física y disparo, y un game loop asíncrono que permite jugarlo en el navegador. Proyecto del curso de desarrollo de videojuegos de la maestría.",
           stack: "Python, pygame, esper (ECS)",
@@ -77,6 +85,12 @@ const t = {
             ["Jugar en itch.io", "https://jehernandezr.itch.io/bouncinguniandesrectang"],
             ["Código", `${GITHUB}/Rectangulos-Bouncing`],
           ],
+        },
+        {
+          name: "Cosmonian",
+          text: "Juego de naves en un mundo que da la vuelta sobre sí mismo, construido con arquitectura ECS y con versión para el navegador. Proyecto final del curso de desarrollo de videojuegos de la maestría; el código es privado.",
+          stack: "Python, pygame-ce, esper (ECS), pygbag",
+          links: [],
         },
         {
           name: "TypeORM Log Transformer",
@@ -226,6 +240,14 @@ const t = {
           links: [["Visit guruh.co", "https://guruh.co"]],
         },
         {
+          name: "Solventa",
+          text: "A life insurance platform for mortgage loans that plugs into a bank's lending process: real-time quotes using Open Finance data, policies, payments and claims. A backend of 9 microservices deployed on AWS EKS with Terraform, plus a mobile app and a micro-frontend web app. Team final project for my master's.",
+          stack: "Python, FastAPI, Kubernetes, AWS, Terraform, React Native, Angular",
+          links: [
+            ["Code", "https://github.com/MISOG6ProyectoFinal/solventa"],
+          ],
+        },
+        {
           name: "Rectángulos Bouncing",
           text: "A 2D game in Python built on an ECS (Entity Component System) architecture: scenes, physics and shooting systems, and an asynchronous game loop that makes it playable in the browser. Built for the game development course in my master's.",
           stack: "Python, pygame, esper (ECS)",
@@ -233,6 +255,12 @@ const t = {
             ["Play on itch.io", "https://jehernandezr.itch.io/bouncinguniandesrectang"],
             ["Code", `${GITHUB}/Rectangulos-Bouncing`],
           ],
+        },
+        {
+          name: "Cosmonian",
+          text: "A spaceship game set in a world that wraps around itself, built on an ECS architecture with a browser version. Final project for the game development course in my master's; the code is private.",
+          stack: "Python, pygame-ce, esper (ECS), pygbag",
+          links: [],
         },
         {
           name: "TypeORM Log Transformer",
@@ -356,7 +384,7 @@ function page(lang) {
               ${p.note ? `<span class="note">${p.note}</span>` : ""}
               <p>${p.text}</p>
               <p class="stack">${p.stack}</p>
-              <div class="links">${p.links.map(([label, href]) => `<a${ext(href)}>${label}</a>`).join("")}</div>
+              ${p.links.length ? `<div class="links">${p.links.map(([label, href]) => `<a${ext(href)}>${label}</a>`).join("")}</div>` : ""}
             </li>`
     )
     .join("");
