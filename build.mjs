@@ -86,6 +86,14 @@ const t = {
           ],
         },
         {
+          name: "Agente de atención para Telco Andina",
+          text: "Agente conversacional para el centro de atención de una empresa de telecomunicaciones. Es un grafo que alterna entre razonar con un modelo de lenguaje local y ejecutar herramientas: unas locales para consultar información y otras vía un servidor MCP para ejecutar acciones. Incluye un segundo agente, asesor de retención, y un CLI para conversar con ellos. Proyecto en pareja del curso de agentes de IA de la maestría.",
+          stack: "Python, LangGraph, MCP, Ollama, Docker",
+          links: [
+            ["Código", "https://github.com/jehernandezr/agente-telco-andina"],
+          ],
+        },
+        {
           name: "Rectángulos Bouncing",
           text: "Juego 2D en Python construido con arquitectura ECS (Entity Component System): escenas, sistemas de física y disparo, y un game loop asíncrono que permite jugarlo en el navegador. Proyecto del curso de desarrollo de videojuegos de la maestría.",
           stack: "Python, pygame, esper (ECS)",
@@ -261,6 +269,14 @@ const t = {
           stack: "Python, FastAPI, PostgreSQL, Kafka, AWS, Docker",
           links: [
             ["Code", "https://github.com/dso-uniandes/desarrollo-de-software-en-la-nube"],
+          ],
+        },
+        {
+          name: "Customer service agent for Telco Andina",
+          text: "A conversational agent for a telecom company's customer service center. It's a graph that alternates between reasoning with a local language model and running tools: local ones to look up information and others through an MCP server to take actions. It includes a second agent, a retention advisor, and a CLI to chat with them. Pair project for the AI agents course in my master's.",
+          stack: "Python, LangGraph, MCP, Ollama, Docker",
+          links: [
+            ["Code", "https://github.com/jehernandezr/agente-telco-andina"],
           ],
         },
         {
